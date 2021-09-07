@@ -14,9 +14,9 @@ Visual Studio extension for the Godot game engine C# projects.
 - Additional code completion for Node paths, Input actions, Resource paths, Scene paths and Signal names.
 
 **NOTES:**
-
+- Due to a change in how Visual Studio interprets project files, the debug targets don't currently show up (see [issue #10](https://github.com/godotengine/godot-csharp-visualstudio/issues/10#issuecomment-720151550)) and VS tries to debug the project as a Class Library.  This fails, as one can't set Class Libraries as startup projects.  The current workaround is to add a dummy project that does satisfy Visual Studio's requirements to display the debug targets.  Steps to do so can be found [in this gist](https://gist.github.com/31/302bab2630ddf8d90ab4aec0d358b538).
 - A running Godot instance must be editing the project in order for code completion and the `Play in Editor` debug target to work.
-- Node path suggestions are provided from the currently edited scene in the Godot editor.
+- Node path suggestions are provided from the currently edited scene in the Godot editor
 
 ## Debug targets
 
